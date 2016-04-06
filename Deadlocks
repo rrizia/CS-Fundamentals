@@ -1,0 +1,46 @@
+
+DEADLOCK
+
+https://docs.oracle.com/cd/E19455-01/806-5257/6je9h0347/index.html
+
+As soon as two or more threads contend for a shared resource, the possibility of deadlock occurs, which
+happens when two threads each have a lock on a resource needed by the other thread. Because neither
+thread can continue running, the threads are said to be deadlocked. Typically, the only way to resolve a
+deadlock is to forcefully terminate one of the threads, which is not a great solution. The best solution
+is deadlock avoidance—using careful programming to ensure that deadlock can never occur.'
+
+
+RECURSIVE OR SELF DEADLOCK
+
+The most common error causing deadlock is self deadlock or recursive deadlock: 
+a thread tries to acquire a lock it is already holding. Recursive deadlock is very easy to program by mistake.
+If a function calls some code outside the module which, through some circuitous path, 
+calls back into any method protected by the same mutex lock, then it will deadlock too.
+
+The solution for this kind of deadlock is to avoid calling functions outside the module when you don't know whether 
+they will call back into the module without reestablishing invariants and dropping all module locks before making the call. 
+Of course, after the call completes and the locks are reacquired, the state must be verified to be sure the intended operation is still valid.
+
+
+OTHER DEADLOCK
+
+An example of another kind of deadlock is when two threads, thread 1 and thread 2, each acquires a mutex lock, A and B, respectively. 
+Suppose that thread 1 tries to acquire mutex lock B and thread 2 tries to acquire mutex lock A. 
+Thread 1 cannot proceed and it is blocked waiting for mutex lock B. 
+Thread 2 cannot proceed and it is blocked waiting for mutex lock A. 
+Nothing can change, so this is a permanent blocking of the threads, and a deadlock.
+
+This kind of deadlock is avoided by establishing an order in which locks are acquired (a lock hierarchy). 
+When all threads always acquire locks in the specified order, this deadlock is avoided.
+
+
+LOCKING GUIDELINE
+Here are some simple guidelines for locking.
+
+Try not to hold locks across long operations like I/O where performance can be adversely affected.
+
+Don't hold locks when calling a function that is outside the module and that might reenter the module.
+
+In general, start with a coarse-grained approach, identify bottlenecks, and add finer-grained locking where necessary to alleviate the bottlenecks. Most locks are held for short amounts of time and contention is rare, so fix only those locks that have measured contention.
+
+When using multiple locks, avoid deadlocks by making sure that all threads acquire the locks in the same order.
