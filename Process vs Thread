@@ -1,0 +1,56 @@
+http://www.programmerinterview.com/index.php/operating-systems/thread-vs-process/
+
+PROCESS
+A process is an executing instance of an application. 
+What does that mean? Well, for example, when you double-click the Microsoft Word icon, you start a process that runs Word. 
+
+THREAD
+A thread is a path of execution within a process. Also, a process can contain multiple threads. 
+When you start Word, the operating system creates a process and begins executing the primary thread of that process.
+
+A thread is the fundamental unit of execution within an application: Arunning application consists
+of at least one thread. Each thread has its own stack and runs independently from the application’s
+other threads. Threads share the resources used by the application as it runs, such as file handles
+or memory, which is why problems can occur. Data corruption is a common side effect of having
+two threads simultaneously write data to the same block of memory, for example.
+
+1. Threads are easier to create than processes since they 
+don't require a separate address space.
+						
+2. Multithreading requires careful programming since threads 
+share data strucures that should only be modified by one thread
+at a time.  Unlike threads, processes don't share the same 
+address space.
+						
+3.  Threads are considered lightweight because they use far 
+less resources than processes.
+						
+4.  Processes are independent of each other.  Threads, since they 
+share the same address space are interdependent, so caution 
+must be taken so that different threads don't step on each other.  
+This is really another way of stating #2 above.
+						
+5.  A process can consist of multiple threads.
+
+Because the number of threads that can be executed at any given instant is limited by the number of pro-
+cessors in the computer, the operating system will rapidly switch from thread to thread, giving each
+thread a small window of time in which to run. This is known as preemptive threading, because the oper-
+ating system can suspend a thread’s execution at any point in order to let another thread run. (Acooper-
+ative model, on the other hand, requires a thread to explicitly suspend its own execution in order to let
+other threads run.) Swapping one thread out and another in is referred to as a context switch.
+
+
+SYSTEM THREADS VS USER THREAD
+
+It’s useful to distinguish between system threads and user threads. Asystem thread is created and man-
+aged by the system. The first (main) thread of an application is a system thread, and the application
+often exits when the first thread terminates. User threads are explicitly created by the application to do
+tasks that cannot or should not be done by the main thread.
+
+Applications that display user interfaces must be particularly careful with how they use threads. The
+main thread in such an application is usually called the event thread, because it waits for and delivers
+events (such as mouse clicks and key presses) to the application for processing. Generally speaking,
+causing the event thread to block for any length of time is considered bad programming practice,
+because it leads to (at best) an unresponsive application or (at worst) a frozen computer. Applications
+avoid these issues by creating threads to handle time-consuming operations, especially those involving
+network access.
