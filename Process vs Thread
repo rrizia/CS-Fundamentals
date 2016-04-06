@@ -42,7 +42,7 @@ other threads run.) Swapping one thread out and another in is referred to as a c
 
 SYSTEM THREADS VS USER THREAD
 
-It’s useful to distinguish between system threads and user threads. Asystem thread is created and man-
+It’s useful to distinguish between system threads and user threads. A system thread is created and man-
 aged by the system. The first (main) thread of an application is a system thread, and the application
 often exits when the first thread terminates. User threads are explicitly created by the application to do
 tasks that cannot or should not be done by the main thread.
