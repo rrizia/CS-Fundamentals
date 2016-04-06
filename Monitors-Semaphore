@@ -1,0 +1,21 @@
+http://www.programmerinterview.com/index.php/operating-systems/monitors-vs-semaphores/
+
+A monitor is a set of multiple routines which are protected by a mutual exclusion lock. 
+None of the routines in the monitor can be executed by a thread until that thread acquires the lock. 
+This means that only ONE thread can execute within the monitor at a time. 
+Any other threads must wait for the thread that’s currently executing to give up control of the lock.
+
+However, a thread can actually suspend itself inside a monitor and then wait for an event to occur. 
+If this happens, then another thread is given the opportunity to enter the monitor. 
+The thread that was suspended will eventually be notified that the event it was waiting for has now occurred, 
+which means it can wake up and reacquire the lock.
+
+A semaphore is a simpler construct than a monitor because it’s just a lock that protects a shared resource –
+and not a set of routines like a monitor. 
+The application must acquire the lock before using that shared resource protected by a semaphore.
+
+Example of a Semaphore – a Mutex
+
+A mutex is the most basic type of semaphore, and mutex is short for mutual exclusion. In a mutex, only one
+thread can use the shared resource at a time. If another thread wants to use the shared resource, 
+it must wait for the owning thread to release the lock.
