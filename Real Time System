@@ -1,0 +1,10 @@
+What is a real time system?
+Definition 1:
+A real-time system is one that must process information and produce a response within a specified time, else risk severe consequences, 
+including failure. That is, in a system with a real-time constraint it is no good to have the correct action or the correct 
+answer after a certain deadline: it is either by the deadline or it is useless!
+ 
+Definition 2 (modified from The Oxford Dictionary of Computing):
+Any system in which the time at which output is produced is significant. 
+This is usually because the input corresponds to some event in the physical world, and the output has to relate to that same event. 
+The lag from input time to output time must be sufficiently small for acceptable timeliness
