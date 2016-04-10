@@ -1,0 +1,19 @@
+A cache (pronounced CASH) is a place to store something temporarily in a computing environment.
+
+In computing, active data is often cached to shorten data access times, reduce latency and improve input/output (I/O). 
+Because almost all application workload is dependent upon I/O operations, caching is used to improve application performance.
+
+Caching (pronounced “cashing”) is the process of storing data in a cache.
+
+A cache is a temporary storage area. For example, the files you automatically request by looking at a 
+Web page are stored on your hard disk in a cache subdirectory under the directory for your browser. 
+When you return to a page you've recently looked at, the browser can get those files from the cache rather than the original server, 
+saving you time and saving the network the burden of additional traffic.
+
+
+
+
+Cache memory: Random access memory (RAM) that a computer microprocessor can access more quickly than it can access regular RAM.
+Cache memory is usually tied directly to the CPU and is used to cache instructions that are frequently accessed by the processes 
+that are currently running. Although a RAM cache is much faster than a disk-based cache,
+cache memory is much faster than a RAM cache because of its proximity to the CPU.
