@@ -1,0 +1,14 @@
+6) What is virtual memory?
+
+Virtual memory is a memory management technique for letting processes execute outside of memory. 
+This is very useful especially is an executing program cannot fit in the physical memory.
+
+7) Describe the objective of multiprogramming.
+
+The main objective of multiprogramming is to have process running at all times. With this design, 
+CPU utilization is said to be maximized.
+
+8 ) What are time sharing systems?
+
+In a Time sharing system, the CPU executes multiple jobs by switching among them, also known as multitasking. 
+This process happens so fast that users can actually interact with each program while it is running.
