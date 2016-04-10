@@ -1,0 +1,14 @@
+
+Some advantages of multiprocessor system are as follows:
+
+• Reduced Cost: Multiple processors share the same resources. Separate power supply or mother board for each chip is not required. 
+This reduces the cost.
+
+• Increased Reliability: The reliability of system is also increased. 
+The failure of one processor does not affect the other processors though it will slow down the machine. 
+Several mechanisms are required to achieve increased reliability. If a processor fails, a job running on that processor also fails. 
+The system must be able to reschedule the failed job or to alert the user that the job was not successfully completed.
+
+• Increased Throughput: An increase in the number of processes completes the work in less time. 
+It is important to note that doubling the number of processors does not halve the time to complete a job. 
+It is due to the overhead in communication between processors and contention for shared resources etc.
