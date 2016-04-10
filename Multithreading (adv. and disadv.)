@@ -1,0 +1,40 @@
+Advantages
+
+general: better use of system resources
+parallelize tasks
+enhanced performance on multi-processor machines
+multithreaded servers and interactive GUIs: better availability
+
+Enhanced performance by decreased development time
+Simplified and streamlined program coding
+Improvised GUI responsiveness
+Simultaneous and parallelized occurrence of tasks
+Better use of cache storage by utilization of resources
+Decreased cost of maintenance
+Better use of CPU resource
+
+
+Disadvantages of a Multithreaded/Multicontexted Application
+Multithreaded and multicontexted applications present the following disadvantages:
+
+Difficulty of writing code
+Multithreaded and multicontexted applications are not easy to write. 
+Only experienced programmers should undertake coding for these types of applications.
+
+Difficulty of debugging
+It is much harder to replicate an error in a multithreaded or multicontexted application than it is to do so in a single-threaded, 
+single-contexted application. As a result, it is more difficult, in the former case, to identify and verify root causes when errors occur.
+
+Difficulty of managing concurrency
+The task of managing concurrency among threads is difficult and has the potential to introduce new problems into an application.
+
+Difficulty of testing
+Testing a multithreaded application is more difficult than testing a single-threaded application because 
+defects are often timing-related and more difficult to reproduce.
+
+Difficulty of porting existing code
+Existing code often requires significant re-architecting to take advantage of multithreading and multicontexting. Programmers need to:
+Remove static variables
+Replace any function calls that are not thread-safe
+Replace any other code that is not thread-safe
+Because the completed port must be tested and re-tested, the work required to port a multithreaded and/or multicontexted application is substantial.
