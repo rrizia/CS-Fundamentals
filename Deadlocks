@@ -44,3 +44,6 @@ Don't hold locks when calling a function that is outside the module and that mig
 In general, start with a coarse-grained approach, identify bottlenecks, and add finer-grained locking where necessary to alleviate the bottlenecks. Most locks are held for short amounts of time and contention is rare, so fix only those locks that have measured contention.
 
 When using multiple locks, avoid deadlocks by making sure that all threads acquire the locks in the same order.
+
+Banker’s algorithm is one form of deadlock-avoidance in a system. It gets its name from a banking system 
+wherein the bank never allocates available cash in such a way that it can no longer satisfy the needs of all of its customers.
