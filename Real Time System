@@ -8,3 +8,6 @@ Definition 2 (modified from The Oxford Dictionary of Computing):
 Any system in which the time at which output is produced is significant. 
 This is usually because the input corresponds to some event in the physical world, and the output has to relate to that same event. 
 The lag from input time to output time must be sufficiently small for acceptable timeliness
+
+ABS, aircraft control, ticket reservation system at airport, over-temperature monitor in nuclear power station, mobile phone, 
+oven temperature controller, Doppler blood-flow monitor, ECG/arrhythmia monitor
